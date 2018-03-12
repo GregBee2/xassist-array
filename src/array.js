@@ -1,10 +1,7 @@
 'use strict'
 function pushUnique(arr,val,unique){
-	if(!!unique===false){
-		return arr.push(val);
-	}
-	else if(arr.indexOf(val)===-1){
-		//unique is set to true and it is really unique
+	unique=(typeof unique==="undefined"?true:!!unique);
+	if(!unique || arr.indexOf(val)===-1){
 		return arr.push(val);
 	}
 	else{

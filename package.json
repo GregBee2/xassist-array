@@ -12,7 +12,10 @@
     "email": "gregory.beirens@gmail.com"
   },
   "license": "GPL-3.0",
-  "author": "Gregory Beirens <gregory.beirens@gmail.com>",
+  "author": {
+    "name": "Gregory Beirens",
+    "email": "gregory.beirens@gmail.com"
+  },
   "main": "dist/xAssist-array.js",
   "scripts": {
     "pretest": "rimraf dist  && rollup -c",

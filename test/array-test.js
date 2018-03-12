@@ -8,6 +8,9 @@ var testArray=[
 var testArray2=[
 	1,2,3,5,6,8,9
 ]
+var testArray3=[
+	,2,2,"a","b",{t:1},{a:2}
+]
 
 
 tape("pushUnique should only push values when unique", function(test) {
@@ -31,6 +34,8 @@ tape("groupSequence() groups the array based upon decision function", function(t
 	var result=t.groupSequence(fn);
 	test.deepEqual(result,[[1,2,3],[5,6],[8,9]],
 		"groupSequence(fn) creates new group when fn(prevValue,currentValue)==false");
+	var fn2=function(a,b){return typeof a===typeof b}
+	console.log(array(testArray2).groupSequence(fn2))
 	test.end();	
 });
 

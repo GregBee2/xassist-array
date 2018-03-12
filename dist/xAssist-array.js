@@ -1,6 +1,6 @@
-// https://github.com/GregBee2/xassist-array#readme Version 0.0.4.
-// Copyright 2018 undefined.
-// Created on Mon, 12 Mar 2018 14:42:57 GMT.
+// https://github.com/GregBee2/xassist-array#readme Version 0.0.5.
+// Copyright 2018 Gregory Beirens.
+// Created on Mon, 12 Mar 2018 14:46:30 GMT.
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :

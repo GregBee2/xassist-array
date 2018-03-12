@@ -12,7 +12,7 @@ FNDA:1,(anonymous_1)
 FNDA:1,(anonymous_2)
 FNDA:3,pushUnique
 FNDA:2,groupSequence
-FNDA:14,(anonymous_5)
+FNDA:13,(anonymous_5)
 FNDA:3,array
 DA:4,1
 DA:5,1
@@ -23,10 +23,10 @@ DA:13,2
 DA:17,1
 DA:20,1
 DA:23,2
-DA:24,14
-DA:26,10
-DA:30,4
-DA:32,14
+DA:24,13
+DA:26,7
+DA:30,6
+DA:32,13
 DA:35,1
 DA:36,3
 DA:42,1
@@ -49,8 +49,8 @@ BRDA:12,7,0,2
 BRDA:12,7,1,1
 BRDA:12,8,0,3
 BRDA:12,8,1,2
-BRDA:24,9,0,10
-BRDA:24,9,1,4
+BRDA:24,9,0,7
+BRDA:24,9,1,6
 BRF:18
 BRH:11
 end_of_record

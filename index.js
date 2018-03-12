@@ -1,2 +1,2 @@
-export {default as object} from './src/object.js'
+export {default as array} from './src/array.js'
 

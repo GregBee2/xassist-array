@@ -1,6 +1,6 @@
 // https://github.com/GregBee2/xassist-array#readme Version 0.0.5.
 // Copyright 2018 Gregory Beirens.
-// Created on Mon, 12 Mar 2018 14:46:30 GMT.
+// Created on Tue, 13 Mar 2018 11:04:18 GMT.
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -33,10 +33,34 @@ function groupSequence(arr,checkFn){
 		return result;
 	},[]);
 }
+function replaceNull(arr,replacer){
+	//this function replaces all null or undefined values with a value described by replacer
+	//replacer may be static text or a function which will give correct textOutput
+	var replaceFn,result=[];
+	if (Array.isArray(replacer)){
+		replaceFn=function(v,i){return replacer[i]};
+	}
+	else if (typeof replacer==="function"){
+		replaceFn=replacer;
+	}
+	else {
+		replaceFn=function(){return replacer};
+	}
+	for (let i=0,len=arr.length;i<len;i++){
+		let v=arr[i];
+		if (v===null||typeof v==="undefined"){
+			result.push(replaceFn(v,i));
+		}
+		else {
+			result.push(v);
+		}
+	}	return result;
+}
 function array(arr){
 	return {
 		pushUnique:pushUnique.bind(null,arr),
-		groupSequence:groupSequence.bind(null,arr)
+		groupSequence:groupSequence.bind(null,arr),
+		replaceNull:replaceNull.bind(null,arr)
 	};
 }
 

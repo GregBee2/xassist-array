@@ -25,10 +25,35 @@ function groupSequence(arr,checkFn){
 		return result;
 	},[]);
 }
+function replaceNull(arr,replacer){
+	//this function replaces all null or undefined values with a value described by replacer
+	//replacer may be static text or a function which will give correct textOutput
+	var replaceFn,result=[];
+	if (Array.isArray(replacer)){
+		replaceFn=function(v,i){return replacer[i]};
+	}
+	else if (typeof replacer==="function"){
+		replaceFn=replacer;
+	}
+	else {
+		replaceFn=function(){return replacer};
+	}
+	for (let i=0,len=arr.length;i<len;i++){
+		let v=arr[i];
+		if (v===null||typeof v==="undefined"){
+			result.push(replaceFn(v,i));
+		}
+		else {
+			result.push(v);
+		}
+	};
+	return result;
+}
 export default function array(arr){
 	return {
 		pushUnique:pushUnique.bind(null,arr),
-		groupSequence:groupSequence.bind(null,arr)
+		groupSequence:groupSequence.bind(null,arr),
+		replaceNull:replaceNull.bind(null,arr)
 	};
 };
 	

@@ -1,6 +1,9 @@
-// https://github.com/GregBee2/xassist-array#readme Version 0.0.6.
-// Copyright 2018 Gregory Beirens.
-// Created on Tue, 13 Mar 2018 11:04:38 GMT.
+/**
+* @preserve
+* https://github.com/GregBee2/xassist-array#readme Version 0.0.6.
+*  Copyright 2018 Gregory Beirens.
+*  Created on Wed, 14 Mar 2018 12:42:31 GMT.
+*/
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -46,15 +49,16 @@ function replaceNull(arr,replacer){
 	else {
 		replaceFn=function(){return replacer};
 	}
-	for (let i=0,len=arr.length;i<len;i++){
-		let v=arr[i];
+	for (var i=0,len=arr.length,v;i<len;i++){
+		v=arr[i];
 		if (v===null||typeof v==="undefined"){
 			result.push(replaceFn(v,i));
 		}
 		else {
 			result.push(v);
 		}
-	}	return result;
+	}
+	return result;
 }
 function array(arr){
 	return {

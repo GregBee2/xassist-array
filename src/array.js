@@ -38,15 +38,15 @@ function replaceNull(arr,replacer){
 	else {
 		replaceFn=function(){return replacer};
 	}
-	for (let i=0,len=arr.length;i<len;i++){
-		let v=arr[i];
+	for (var i=0,len=arr.length,v;i<len;i++){
+		v=arr[i];
 		if (v===null||typeof v==="undefined"){
 			result.push(replaceFn(v,i));
 		}
 		else {
 			result.push(v);
 		}
-	};
+	}
 	return result;
 }
 export default function array(arr){
@@ -55,5 +55,5 @@ export default function array(arr){
 		groupSequence:groupSequence.bind(null,arr),
 		replaceNull:replaceNull.bind(null,arr)
 	};
-};
+}
 	

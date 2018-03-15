@@ -1,8 +1,8 @@
 /**
 * @preserve
-* https://github.com/GregBee2/xassist-array#readme Version 0.0.7.
+* https://github.com/GregBee2/xassist-array#readme Version 0.0.8.
 *  Copyright 2018 Gregory Beirens.
-*  Created on Wed, 14 Mar 2018 12:43:24 GMT.
+*  Created on Thu, 15 Mar 2018 08:27:56 GMT.
 */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :

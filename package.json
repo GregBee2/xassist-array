@@ -1,6 +1,6 @@
 {
   "name": "@xassist/xassist-array",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "helper functions for javascript arrays",
   "keywords": [
     "xAssist",
@@ -17,7 +17,7 @@
     "email": "gregory.beirens@gmail.com"
   },
   "main": "dist/xAssist-array.js",
-  "module":"index",
+  "module": "index",
   "scripts": {
     "pretest": "rimraf dist  && rollup -c",
     "test": "istanbul cover node_modules/tape/bin/tape test/**/*-test.js && eslint index.js src",
